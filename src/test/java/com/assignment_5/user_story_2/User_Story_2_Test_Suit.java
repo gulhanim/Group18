@@ -108,6 +108,10 @@ public class User_Story_2_Test_Suit {
 
     @Test
     public void User_Story_2_AC_4() throws InterruptedException {
+        driver.get("https://login2.nextbasecrm.com/");
+        driver.findElement(By.xpath("//input[@name='USER_LOGIN']")).sendKeys("helpdesk18@cybertekschool.com");
+        driver.findElement(By.xpath("//input[@name = 'USER_PASSWORD']")).sendKeys("UserUser"+ Keys.ENTER);
+        Thread.sleep(3000);
         WebElement taskButton = driver.findElement(By.xpath("//div[@class='feed-add-post-form-variants']//span[@id='feed-add-post-form-tab-tasks']"));
         taskButton.click();
         Thread.sleep(3000);
